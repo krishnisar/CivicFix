@@ -1,5 +1,5 @@
 import {
-    BrowserRouter,
+    HashRouter,
     Routes,
     Route
 } from "react-router-dom";
@@ -15,37 +15,32 @@ import Dashboard from "./pages/Dashboard";
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
 
             <Navbar />
 
             <Routes>
 
-                {/* Home */}
                 <Route
                     path="/"
                     element={<Home />}
                 />
 
-                {/* Report Issue */}
                 <Route
                     path="/report"
                     element={<ReportIssue />}
                 />
 
-                {/* Track Issues */}
                 <Route
                     path="/issues"
                     element={<Issues />}
                 />
 
-                {/* Community Help */}
                 <Route
                     path="/help"
                     element={<CommunityHelp />}
                 />
 
-                {/* Dashboard */}
                 <Route
                     path="/dashboard"
                     element={<Dashboard />}
@@ -53,7 +48,7 @@ function App() {
 
             </Routes>
 
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
